@@ -6,14 +6,12 @@ namespace Pegaso.Tests
 {
     public class EmployeeTest
     {
-        EmployeesService service;
+        EmployeesService service = new EmployeesService();
         EmployeeRequest employeeRequest=new EmployeeRequest();
         int idCorrecto;
         int idIncorrecto;
         public EmployeeTest()
         {
-            service = new EmployeesService();
-
             employeeRequest.CompanyId = 1;
             employeeRequest.CreatedOn = DateTime.Now;
             employeeRequest.DeleteOn = DateTime.Now;
@@ -32,7 +30,14 @@ namespace Pegaso.Tests
             idCorrecto = 1;
             idIncorrecto = 2;
         }
-        
+
+        [Fact]
+        public void ObtenerTodos_Correcto() 
+        {
+            var result = service.ObtenerEmpleados();
+            Assert.NotEmpty((System.Collections.IEnumerable)result.Result);
+        }
+
         [Fact]
         public void Insertar_Correcto()
         {

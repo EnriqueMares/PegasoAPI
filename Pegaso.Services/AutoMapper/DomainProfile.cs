@@ -15,7 +15,7 @@ namespace Pegaso.Services.AutoMapper
         public void CreateMaps()
         {
             CreateMap<Employee, EmployeeResponse>();
-            CreateMap<Employee, EmployeeRequest>();
+            CreateMap<Employee, EmployeeRequest>().ReverseMap();
         }
     }
 }

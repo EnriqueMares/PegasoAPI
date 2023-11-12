@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "25bb63e4-f7bb-418e-998b-2a708215184b",
+		"name": "Pegaso",
+		"description": "Incluye la lista de pruebas en Postman para el API de Pegaso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4404637"
+	},
+	"item": [
+		{
+			"name": "Alta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"companyId\": 1,\r\n\"createdOn\":\"2000-01-01T00:00:00\", \r\n\"deleteOn\":\"2000-01-01T00:00:00\",\r\n\"email\":\"test2@test.test.tmp\",\r\n\"fax\":\"000.000.000\",\r\n\"name\":\"test2\",\r\n\"lastLogin\":\"2000-01-01T00:00:00\",\r\n\"password\":\"test\",\r\n\"portalId\":2,\r\n\"roleId\":1,\r\n\"statusId\":1,\r\n\"telephone\":\"000.000.000\",\r\n\"updateOn\":\"2000-01-01T00:00:00\",\r\n\"username\":\"test1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7176/api/Employees/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"Employees",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"companyId\": 1,\r\n\"createdOn\":\"2000-01-01T00:00:00\", \r\n\"deleteOn\":\"2000-01-01T00:00:00\",\r\n\"email\":\"test2@test.test.tmp\",\r\n\"fax\":\"000.000.000\",\r\n\"name\":\"test2\",\r\n\"lastLogin\":\"2000-01-01T00:00:00\",\r\n\"password\":\"test\",\r\n\"portalId\":2,\r\n\"roleId\":1,\r\n\"statusId\":1,\r\n\"telephone\":\"000.000.000\",\r\n\"updateOn\":\"2000-01-01T00:00:00\",\r\n\"username\":\"test2updated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7176/api/Employees/{{id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"Employees",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:7176/api/Employees/{{id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"Employees",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:7176/api/Employees",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener por Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:7176/api/Employees/{{id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"Employees",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

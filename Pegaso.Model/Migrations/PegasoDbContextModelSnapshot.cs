@@ -25,10 +25,7 @@ namespace Pegaso.Model.Migrations
             modelBuilder.Entity("Pegaso.Model.Database.Model.Employee", b =>
                 {
                     b.Property<int>("PortalId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortalId"));
 
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");

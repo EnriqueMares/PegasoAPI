@@ -26,6 +26,7 @@ namespace Pegaso.Model.Database.Model
         
         [Required]
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PortalId { get; set; }
         
         [Required]

@@ -12,7 +12,7 @@ using Pegaso.Model.Database;
 namespace Pegaso.Model.Migrations
 {
     [DbContext(typeof(PegasoDbContext))]
-    [Migration("20231112055016_InitDb")]
+    [Migration("20231112184814_InitDb")]
     partial class InitDb
     {
         /// <inheritdoc />
@@ -28,10 +28,7 @@ namespace Pegaso.Model.Migrations
             modelBuilder.Entity("Pegaso.Model.Database.Model.Employee", b =>
                 {
                     b.Property<int>("PortalId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PortalId"));
 
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");

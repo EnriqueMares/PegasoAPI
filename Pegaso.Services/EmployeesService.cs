@@ -42,7 +42,6 @@ namespace Pegaso.Services
                 .Where(e => e.PortalId == id)
                .Select(x => _mapper.Map<EmployeeResponse>(x))
                .FirstOrDefaultAsync();
-
             return empleado;
         }
 
@@ -51,12 +50,12 @@ namespace Pegaso.Services
             var empleado = await _context.Employee
                 .AsNoTracking()
                 .Where(e => e.PortalId == employee.PortalId)
-                .Select(x => _mapper.Map<EmployeeResponse>(x))
+                //.Select(x => _mapper.Map<EmployeeResponse>(x))
                 .FirstOrDefaultAsync();
 
             if (empleado != null)
             {
-                empleado.CompanyId = employee.PortalId;
+                empleado.CompanyId = employee.CompanyId;
                 empleado.Email = employee.Email;
                 empleado.Fax = employee.Fax;
                 empleado.Name = employee.Name;
@@ -65,12 +64,12 @@ namespace Pegaso.Services
                 empleado.StatusId = employee.StatusId;
                 empleado.Telephone = employee.Telephone;
                 empleado.UpdateOn = DateTime.Now;
-                return true;
+                empleado.Username= employee.Username;
+
+                _context.Update(empleado);
+                await _context.SaveChangesAsync();
             }
-            else
-            {
-                return false;
-            }
+            return empleado != null;
         }
 
         public async Task<bool> EliminarEmpleado(int id)
@@ -78,23 +77,25 @@ namespace Pegaso.Services
             var empleado = await _context.Employee
                 .AsNoTracking()
                 .Where(e => e.PortalId == id)
-                .Select(x => _mapper.Map<EmployeeResponse>(x))
                 .FirstOrDefaultAsync();
 
             if (empleado != null)
             {
-                empleado.DeleteOn = DateTime.Now;
-                return true;
+                // Por si la eliminación va a ser ligera
+                // empleado.DeleteOn = DateTime.Now;
+                // _context.Update(empleado);
+
+                _context.Remove(empleado); // Para eliminación permantente
+                await _context.SaveChangesAsync();
             }
-            else 
-            {
-                return false;
-            }
+            return empleado!=null;
         }
 
         public async Task<EmployeeRequest> InsertarEmpleado(EmployeeRequest employee)
         {
-            await _context.AddAsync(employee);
+            Employee empleado = _mapper.Map<Employee>(employee);
+            await _context.AddAsync(empleado);
+            await _context.SaveChangesAsync();
             return employee;
         }
     }

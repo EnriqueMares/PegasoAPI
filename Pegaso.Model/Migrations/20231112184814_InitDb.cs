@@ -19,8 +19,7 @@ namespace Pegaso.Model.Migrations
                 schema: "Business",
                 columns: table => new
                 {
-                    PortalId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PortalId = table.Column<int>(type: "int", nullable: false),
                     CompanyId = table.Column<int>(type: "int", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeleteOn = table.Column<DateTime>(type: "datetime2", nullable: false),

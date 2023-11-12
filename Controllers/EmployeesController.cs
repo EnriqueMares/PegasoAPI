@@ -26,7 +26,7 @@ namespace Pegaso.WebAPI.Controllers
             return new StandardResponse<List<EmployeeResponse>>(HttpStatusCode.OK, result).ToActionResult();
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> ObtenerEmpleadoPorId(int id)
         {
             var result = await _employeesService.ObtenerEmpleadoPorId(id);
@@ -34,20 +34,20 @@ namespace Pegaso.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertarEmpleado(EmployeeRequest employee)
+        public async Task<IActionResult> InsertarEmpleado([FromBody] EmployeeRequest employee)
         {
             var result = await _employeesService.InsertarEmpleado(employee);
             return new StandardResponse<EmployeeRequest>(HttpStatusCode.OK, result).ToActionResult();
         }
 
-        [HttpPut]
-        public async Task<IActionResult> ActualizarEmpleado(EmployeeRequest employee)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> ActualizarEmpleado([FromBody] EmployeeRequest employee)
         {
             var result = await _employeesService.ActualizarEmpleado(employee);
             return new StandardResponse<bool>(HttpStatusCode.OK, result).ToActionResult();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> EliminarEmpleado(int id)
         {
             var result = await _employeesService.EliminarEmpleado(id);
