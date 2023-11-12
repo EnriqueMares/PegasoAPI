@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pegaso.WebAPI", "Pegaso.WebAPI.csproj", "{D7B6A559-CB4C-4FDF-8431-C7D150F9D59C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{E69925DB-399A-47B2-B534-0A00F02B3A3F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3CB05DAE-65C9-42CE-ADEE-4174A09E1F68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegaso.Model", "..\Pegaso.Model\Pegaso.Model.csproj", "{D0D591F6-296B-43EF-9A19-E7FA4D326F34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegaso.Services", "..\Pegaso.Services\Pegaso.Services.csproj", "{B007FE50-0D6C-444D-9ED7-1A2D0ADA77A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegaso.Common", "..\Pegaso.Common\Pegaso.Common.csproj", "{15CF9953-11A1-4AA3-92D3-21AF88DEED76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegaso.Tests", "..\PegasoTests\Pegaso.Tests.csproj", "{19DD8C0A-5C0B-415A-8565-8D71FD4F6015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7B6A559-CB4C-4FDF-8431-C7D150F9D59C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B6A559-CB4C-4FDF-8431-C7D150F9D59C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B6A559-CB4C-4FDF-8431-C7D150F9D59C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B6A559-CB4C-4FDF-8431-C7D150F9D59C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D591F6-296B-43EF-9A19-E7FA4D326F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D591F6-296B-43EF-9A19-E7FA4D326F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D591F6-296B-43EF-9A19-E7FA4D326F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D591F6-296B-43EF-9A19-E7FA4D326F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B007FE50-0D6C-444D-9ED7-1A2D0ADA77A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B007FE50-0D6C-444D-9ED7-1A2D0ADA77A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B007FE50-0D6C-444D-9ED7-1A2D0ADA77A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B007FE50-0D6C-444D-9ED7-1A2D0ADA77A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CF9953-11A1-4AA3-92D3-21AF88DEED76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CF9953-11A1-4AA3-92D3-21AF88DEED76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CF9953-11A1-4AA3-92D3-21AF88DEED76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CF9953-11A1-4AA3-92D3-21AF88DEED76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19DD8C0A-5C0B-415A-8565-8D71FD4F6015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19DD8C0A-5C0B-415A-8565-8D71FD4F6015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19DD8C0A-5C0B-415A-8565-8D71FD4F6015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19DD8C0A-5C0B-415A-8565-8D71FD4F6015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7B6A559-CB4C-4FDF-8431-C7D150F9D59C} = {3CB05DAE-65C9-42CE-ADEE-4174A09E1F68}
+		{D0D591F6-296B-43EF-9A19-E7FA4D326F34} = {3CB05DAE-65C9-42CE-ADEE-4174A09E1F68}
+		{B007FE50-0D6C-444D-9ED7-1A2D0ADA77A8} = {3CB05DAE-65C9-42CE-ADEE-4174A09E1F68}
+		{15CF9953-11A1-4AA3-92D3-21AF88DEED76} = {3CB05DAE-65C9-42CE-ADEE-4174A09E1F68}
+		{19DD8C0A-5C0B-415A-8565-8D71FD4F6015} = {3CB05DAE-65C9-42CE-ADEE-4174A09E1F68}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0300476-4DCD-4627-98F2-EC550637F9DF}
+	EndGlobalSection
+EndGlobal
